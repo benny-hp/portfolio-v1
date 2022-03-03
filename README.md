@@ -1,34 +1,44 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Portfolio - V1
 
-## Getting Started
+![sticky notes app](./public/screenshot.png)
 
-First, run the development server:
+#### Top Technologies
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+[![React Badge](https://img.shields.io/badge/-React-61DBFB?style=for-the-badge&labelColor=black&logo=react&logoColor=61DBFB)](#) [![Typescript Badge](https://img.shields.io/badge/-Typescript-007acc?style=for-the-badge&labelColor=black&logo=typescript&logoColor=007acc)](#) [![Next Badge](https://img.shields.io/badge/-NextJS-141414?style=for-the-badge&labelColor=black&logo=nextdotjs&logoColor=white)](#)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+My portfolio was built to showcase projects and information that you
+might want to know about me. It includes a download link to my
+resume, featured projects, as well as a contact link connected to my
+email. This website was built with React, TypeScript, Next.js, Emotion JS
+for handling the CSS, and serverless functions to handle form validation.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+## Installation
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+1. Download repository
+   ```bash
+   git clone git@github.com:Nomad-Freedom/portfolio-v1.git
+   ```
+2. Install packages
+   ```bash
+   npm install
+   ```
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## Run in Development
 
-## Learn More
+<!-- 1. add env.local file in root directory
+   ```env
+   NEXT_PUBLIC_API_URL=<<server-url>>
+   ``` -->
 
-To learn more about Next.js, take a look at the following resources:
+1. run application
+   ```bash
+   npm run dev
+   ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+<!-- TODO: Add last video link -->
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+#### :mailbox: Reach out to me!
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- :paperclip: [My Resume/CV]()
+- :email: inquiry@bennyhernandez.com
+- :url: [bennyhernandez.com](https://www.bennyhernandez.com)
