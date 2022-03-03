@@ -21,17 +21,17 @@ const Footer = () => {
         `}
       >
         <li>
-          <a href="">
+          <a href="https://github.com/Nomad-Freedom">
             <FiGithub />
           </a>
         </li>
         <li>
-          <a href="">
+          <a href="mailto:inquiry@bennyhernandez.com">
             <FiMail />
           </a>
         </li>
         <li>
-          <a href="">
+          <a href="https://www.linkedin.com/in/benny-hernandez/">
             <FiLinkedin />
           </a>
         </li>
