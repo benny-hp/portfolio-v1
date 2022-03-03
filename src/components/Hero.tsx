@@ -1,0 +1,67 @@
+import { css, useTheme } from "@emotion/react";
+import styled from "@emotion/styled";
+import { Intro, Button } from "../components/ui";
+
+const Hero = () => {
+  const theme = useTheme();
+  return (
+    <Container>
+      <div>
+        <Intro mb={1}>Hi, my name is</Intro>
+        <HeroHeading>
+          Benny{" "}
+          <span
+            css={css`
+              color: ${theme.colors.primaryLight};
+            `}
+          >
+            Hernandez
+          </span>
+        </HeroHeading>
+        <HeroSubHeading>Full Stack Developer</HeroSubHeading>
+        <Text>
+          I’m a software engineer specializing in building (full stack web
+          applications) .
+        </Text>
+
+        <Button href="/#about">learn more</Button>
+      </div>
+    </Container>
+  );
+};
+
+export default Hero;
+
+const HeroHeading = styled.h2`
+  font-size: 8rem;
+  font-weight: 900;
+  display: inline-flex;
+  color: ${({ theme }) => theme.colors.primary};
+  flex-direction: column;
+  text-transform: uppercase;
+  /* letter-spacing: 4px; */
+  span {
+    font-size: 5rem;
+    color: ${({ theme }) => theme.colors.light};
+    margin-bottom: ${({ theme }) => theme.space[1]}rem;
+    letter-spacing: 1.25px;
+  }
+`;
+const HeroSubHeading = styled.h1`
+  color: ${({ theme }) => theme.colors.light};
+  font-weight: ${({ theme }) => theme.fontWeights.bolder};
+  margin-bottom: ${({ theme }) => theme.space[2]}rem;
+`;
+const Container = styled.section`
+  display: flex;
+  align-items: center;
+  max-width: 1400px;
+  margin: auto;
+  min-height: calc(100vh - 98.5px);
+`;
+
+const Text = styled.p`
+  font-size: ${({ theme }) => theme.fontSizes.large}rem;
+  color: ${({ theme }) => theme.colors.light};
+  max-width: 40ch;
+`;
