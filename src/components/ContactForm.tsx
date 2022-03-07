@@ -5,8 +5,10 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 
 import { Button } from "./ui";
+import Snackbar from "./ui/Snackbar";
+import { useState } from "react";
 
-interface FormInputs {
+export interface FormInputs {
   name: string;
   company: string;
   email: string;
@@ -30,6 +32,13 @@ const schema = yup
   .required();
 
 const ContactForm = () => {
+  const [open, setOpen] = useState(false);
+  const [message, setMessage] = useState("");
+  const [severity, setSeverity] = useState<"error" | "success">("success");
+  const handleClose = () => {
+    setOpen(false);
+  };
+
   const {
     register,
     handleSubmit,
@@ -39,8 +48,23 @@ const ContactForm = () => {
     resolver: yupResolver(schema),
   });
 
-  const onSubmit = (data: FormInputs) => {
-    console.log(data);
+  const onSubmit = async (data: FormInputs) => {
+    try {
+      const res = await fetch("/api/mail", {
+        method: "POST",
+        body: JSON.stringify(data),
+      });
+      const resData = await res.json();
+      if (resData.status === "FAIL") throw new Error();
+
+      setSeverity("success");
+      setMessage("Message was send successfully");
+    } catch (error) {
+      setSeverity("error");
+      setMessage("Message was not sent");
+    }
+    setOpen(true);
+
     reset();
   };
 
@@ -66,73 +90,82 @@ const ContactForm = () => {
     }
   `;
   return (
-    <form onSubmit={handleSubmit(onSubmit)}>
-      <div
-        css={css`
-          display: grid;
-          grid-gap: ${theme.space[2]}rem;
-          ${theme.mq()[1]} {
-            grid-template-columns: repeat(2, 1fr);
-          }
-        `}
-      >
-        <input
+    <>
+      <form onSubmit={handleSubmit(onSubmit)}>
+        <div
           css={css`
-            ${inputStyles}
-            &:focus {
-              ${errors.name?.message && `outline-color: red;`}
+            display: grid;
+            grid-gap: ${theme.space[2]}rem;
+            ${theme.mq()[1]} {
+              grid-template-columns: repeat(2, 1fr);
             }
           `}
-          type="text"
-          {...register("name")}
-          placeholder="Name *"
-        />
-        <input
-          css={css`
-            ${inputStyles}
-            &:focus {
-              ${errors.company?.message && `outline-color: red;`}
-            }
-          `}
-          type="text"
-          {...register("company")}
-          placeholder="Company *"
-        />
-        <input
-          css={css`
-            ${inputStyles}
-            &:focus {
-              ${errors.email?.message && `outline-color: red;`}
-            }
-          `}
-          type="email"
-          {...register("email")}
-          placeholder="Email *"
-        />
-        <input
-          css={css`
-            ${inputStyles}
-            &:focus {
-              ${errors.phone?.message && `outline-color: red;`}
-            }
-          `}
-          type="tel"
-          {...register("phone")}
-          placeholder="Phone (optional)"
-        />
-        <textarea
-          css={css`
-            ${textareaStyles}
-            &:focus {
-              ${errors.message?.message && `outline-color: red;`}
-            }
-          `}
-          {...register("message")}
-          placeholder="Message *"
-        ></textarea>
-      </div>
-      <Button type="submit">Say Hello</Button>
-    </form>
+        >
+          <input
+            css={css`
+              ${inputStyles}
+              &:focus {
+                ${errors.name?.message && `outline-color: red;`}
+              }
+            `}
+            type="text"
+            {...register("name")}
+            placeholder="Name *"
+          />
+          <input
+            css={css`
+              ${inputStyles}
+              &:focus {
+                ${errors.company?.message && `outline-color: red;`}
+              }
+            `}
+            type="text"
+            {...register("company")}
+            placeholder="Company *"
+          />
+          <input
+            css={css`
+              ${inputStyles}
+              &:focus {
+                ${errors.email?.message && `outline-color: red;`}
+              }
+            `}
+            type="email"
+            {...register("email")}
+            placeholder="Email *"
+          />
+          <input
+            css={css`
+              ${inputStyles}
+              &:focus {
+                ${errors.phone?.message && `outline-color: red;`}
+              }
+            `}
+            type="tel"
+            {...register("phone")}
+            placeholder="Phone (optional)"
+          />
+          <textarea
+            css={css`
+              ${textareaStyles}
+              &:focus {
+                ${errors.message?.message && `outline-color: red;`}
+              }
+            `}
+            {...register("message")}
+            placeholder="Message *"
+          ></textarea>
+        </div>
+        <Button type="submit">Say Hello</Button>
+      </form>
+      <Snackbar
+        open={open}
+        message={message}
+        autoHideDuration={5000}
+        severity={severity}
+        handleClose={handleClose}
+      />
+    </>
   );
 };
 

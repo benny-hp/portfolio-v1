@@ -12,6 +12,7 @@ const Contact = () => {
         text-align: center;
         padding: ${theme.space[6]}rem 0;
         margin: auto;
+        position: relative;
       `}
       id="contact"
     >
