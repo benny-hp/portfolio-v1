@@ -3,6 +3,13 @@ import React from "react";
 import { FiTwitter, FiLinkedin, FiGithub, FiMail } from "react-icons/fi";
 const Footer = () => {
   const theme = useTheme();
+  const icon = css`
+    font-size: ${theme.fontSizes.normal}rem;
+    transition: color 0.4s ease-in-out;
+    &:hover {
+      color: ${theme.colors.primary};
+    }
+  `;
   return (
     <footer
       css={css`
@@ -21,17 +28,17 @@ const Footer = () => {
         `}
       >
         <li>
-          <a href="https://github.com/Nomad-Freedom">
+          <a css={icon} href="https://github.com/Nomad-Freedom">
             <FiGithub />
           </a>
         </li>
         <li>
-          <a href="mailto:inquiry@bennyhernandez.com">
+          <a css={icon} href="mailto:inquiry@bennyhernandez.com">
             <FiMail />
           </a>
         </li>
         <li>
-          <a href="https://www.linkedin.com/in/benny-hernandez/">
+          <a css={icon} href="https://www.linkedin.com/in/benny-hernandez/">
             <FiLinkedin />
           </a>
         </li>
