@@ -62,14 +62,14 @@ const AboutMe = () => {
           <Text mb={2} weight="bold">
             Email:{" "}
             <a
-              href="mailto:bennyhp87@gmail.com"
+              href="mailto:inquiry@bennyhernandez.com"
               css={css`
                 ${spanBase}
                 color: ${theme.colors.primary};
                 font-weight: ${theme.fontWeights.bold};
               `}
             >
-              bennyhp87@gmail.com
+              inquiry@bennyhernandez.com
             </a>
           </Text>
         </div>

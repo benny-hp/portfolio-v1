@@ -38,10 +38,9 @@ const Portfolio = () => {
       >
         <Heading mb={4}>Client Projects</Heading>
         <Text mb={3}>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto
-          similique sint cum tempora cupiditate tenetur iure, atque quod ullam
-          labore saepe perspiciatis tempore mollitia beatae reiciendis officia
-          odio maiores dicta!
+          Showcasing complete client projects built from the ground up with the
+          most up to date technologies to ensure the greatest level of
+          performance.
         </Text>
         <ProjectsList projects={projects} />
       </section>
