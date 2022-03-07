@@ -16,7 +16,7 @@ for handling the CSS, and serverless functions to handle form validation.
 
 1. Download repository
    ```bash
-   git clone git@github.com:Nomad-Freedom/portfolio-v1.git
+   git clone https://github.com/Nomad-Freedom/portfolio-v1.git
    ```
 2. Install packages
    ```bash
