@@ -4,7 +4,6 @@ import Image from "next/image";
 
 import Footer from "./Footer";
 import Header from "./Header";
-import img from "../../public/ursa-bavcar-6O4zf9lga6Q-unsplash.jpg";
 
 interface Props {
   children: React.ReactNode;
@@ -26,7 +25,7 @@ const Layout = ({ children }: Props) => {
       >
         <Image
           alt="hero image"
-          src={img}
+          src="/ursa-bavcar-6O4zf9lga6Q-unsplash.jpg"
           layout="fill"
           objectFit="cover"
           quality={75}
