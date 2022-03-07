@@ -29,6 +29,8 @@ const ProjectCard = ({ project }: Props) => {
   `;
   const stackContainer = css`
     color: ${theme.colors.neutral};
+    display: flex;
+    flex-wrap: wrap;
   `;
   return (
     <div css={container}>
