@@ -13,6 +13,7 @@ const FlexContainer = ({ children, styles }: Props) => {
         display: flex;
         ${styles}
       `}
+      id="about"
     >
       {children}
     </section>

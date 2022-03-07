@@ -11,7 +11,6 @@ const AboutMe = () => {
   `;
   return (
     <article
-      id="about"
       css={css`
         margin-bottom: ${theme.space[6]}rem;
         ${theme.mq()[2]} {
