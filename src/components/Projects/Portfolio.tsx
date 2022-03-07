@@ -20,7 +20,7 @@ const projects: Project[] = [
       "PostgreSQL",
     ],
     github: "https://github.com/Nomad-Freedom/popcorn-tracker-server",
-    link: "#",
+    link: "",
   },
   {
     title: "Sticky Notes",
@@ -37,7 +37,7 @@ const projects: Project[] = [
       "PostgreSQL",
     ],
     github: "https://github.com/Nomad-Freedom/sticky-notes-web",
-    link: "#",
+    link: "",
   },
   {
     title: "Portfolio Site - V1",
@@ -46,7 +46,7 @@ const projects: Project[] = [
     featured: true,
     techStack: ["React", "Typescript", "Emotion.js", "Next.js"],
     github: "https://github.com/Nomad-Freedom/portfolio-v1",
-    link: "/",
+    link: "https://bennyhernandez.com",
   },
 ];
 

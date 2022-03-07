@@ -19,6 +19,10 @@ const ProjectCard = ({ project }: Props) => {
   `;
   const icon = css`
     font-size: ${theme.fontSizes.normal}rem;
+    transition: color 0.4s ease-in-out;
+    &:hover {
+      color: ${theme.colors.primary};
+    }
   `;
   const iconContainer = css`
     margin-top: 2rem;
@@ -58,10 +62,11 @@ const ProjectCard = ({ project }: Props) => {
             <FiGithub />
           </a>
         )}
-
-        <a css={icon} href={link} target="_blank" rel="noopener noreferrer">
-          <FiExternalLink />
-        </a>
+        {link && (
+          <a css={icon} href={link} target="_blank" rel="noopener noreferrer">
+            <FiExternalLink />
+          </a>
+        )}
       </div>
     </div>
   );
