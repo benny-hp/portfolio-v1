@@ -35,6 +35,8 @@ const Home: NextPage = () => {
           property="og:image"
           content="https://raw.githubusercontent.com/Nomad-Freedom/portfolio-v1/main/public/screenshot.png"
         />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="627" />
 
         <meta name="twitter:card" content="summary_large_image" />
         <meta property="twitter:domain" content="bennyhernandez.com" />
