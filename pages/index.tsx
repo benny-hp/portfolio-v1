@@ -18,6 +18,7 @@ const Home: NextPage = () => {
           name="description"
           content="This is Benny Hernandez software development portfolio site."
         />
+        <meta property="og:image" content="%PUBLIC_URL%/Olympic.jpg" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Hero />
