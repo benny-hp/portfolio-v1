@@ -18,8 +18,42 @@ const Home: NextPage = () => {
           name="description"
           content="This is Benny Hernandez software development portfolio site."
         />
-        <meta property="og:image" content="/screenshot.png" />
+
         <link rel="icon" href="/favicon.ico" />
+
+        <meta property="og:url" content="https://www.bennyhernandez.com/" />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:title"
+          content="Portfolio Site | Software Developer Portfolio"
+        />
+        <meta
+          property="og:description"
+          content="This is Benny Hernandez software development portfolio site."
+        />
+        <meta
+          property="og:image"
+          content="https://bennyhernandez.com/screenshot.png"
+        />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta property="twitter:domain" content="bennyhernandez.com" />
+        <meta
+          property="twitter:url"
+          content="https://www.bennyhernandez.com/"
+        />
+        <meta
+          name="twitter:title"
+          content="Portfolio Site | Software Developer Portfolio"
+        />
+        <meta
+          name="twitter:description"
+          content="This is Benny Hernandez software development portfolio site."
+        />
+        <meta
+          name="twitter:image"
+          content="https://bennyhernandez.com/screenshot.png"
+        />
       </Head>
       <Hero />
       <About />
