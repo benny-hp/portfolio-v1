@@ -33,7 +33,7 @@ const Home: NextPage = () => {
         />
         <meta
           property="og:image"
-          content="https://bennyhernandez.com/screenshot.png"
+          content="https://raw.githubusercontent.com/Nomad-Freedom/portfolio-v1/main/public/screenshot.png"
         />
 
         <meta name="twitter:card" content="summary_large_image" />
@@ -52,7 +52,7 @@ const Home: NextPage = () => {
         />
         <meta
           name="twitter:image"
-          content="https://bennyhernandez.com/screenshot.png"
+          content="https://raw.githubusercontent.com/Nomad-Freedom/portfolio-v1/main/public/screenshot.png"
         />
       </Head>
       <Hero />
