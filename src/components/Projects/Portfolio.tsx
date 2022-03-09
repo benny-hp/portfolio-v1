@@ -37,7 +37,7 @@ const projects: Project[] = [
       "PostgreSQL",
     ],
     github: "https://github.com/Nomad-Freedom/sticky-notes-web",
-    link: "",
+    link: "https://sticky-notes-web.vercel.app/",
   },
   {
     title: "Portfolio Site - V1",
