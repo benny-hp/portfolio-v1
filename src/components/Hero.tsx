@@ -7,7 +7,16 @@ const Hero = () => {
   return (
     <Container>
       <div>
-        <Intro mb={1}>Hi, my name is</Intro>
+        <Intro
+          mb={1}
+          styles={css`
+            ${theme.mq()[2]} {
+              font-size: 2.4rem;
+            }
+          `}
+        >
+          Hi, my name is
+        </Intro>
         <HeroHeading>
           Benny{" "}
           <span
@@ -46,11 +55,20 @@ const HeroHeading = styled.h2`
     margin-bottom: ${({ theme }) => theme.space[1]}rem;
     letter-spacing: 1.25px;
   }
+  ${({ theme }) => theme.mq()[2]} {
+    font-size: 12rem;
+    span {
+      font-size: 7.5rem;
+    }
+  }
 `;
 const HeroSubHeading = styled.h1`
   color: ${({ theme }) => theme.colors.light};
   font-weight: ${({ theme }) => theme.fontWeights.bolder};
   margin-bottom: ${({ theme }) => theme.space[2]}rem;
+  ${({ theme }) => theme.mq()[2]} {
+    font-size: 3rem;
+  }
 `;
 const Container = styled.section`
   display: flex;
