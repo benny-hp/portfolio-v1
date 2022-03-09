@@ -44,6 +44,7 @@ const GlobalStyles = () => {
         p {
           margin: 0;
           font-size: ${theme.fontSizes.normal}rem;
+          line-height: ${theme.lineHeights.body};
         }
       `}
     />
