@@ -46,7 +46,7 @@ const Footer = () => {
       <p>
         © {new Date().getFullYear()}, Built by
         {` `}
-        <a href="https://www.gatsbyjs.com">Benny Hernandez</a>
+        <a href="https://github.com/Nomad-Freedom">Benny Hernandez</a>
       </p>
     </footer>
   );
