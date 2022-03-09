@@ -4,7 +4,7 @@ import { FiTwitter, FiLinkedin, FiGithub, FiMail } from "react-icons/fi";
 const Footer = () => {
   const theme = useTheme();
   const icon = css`
-    font-size: ${theme.fontSizes.normal}rem;
+    font-size: 1.8rem;
     transition: color 0.4s ease-in-out;
     &:hover {
       color: ${theme.colors.primary};

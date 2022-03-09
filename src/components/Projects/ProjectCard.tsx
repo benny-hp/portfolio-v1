@@ -18,7 +18,7 @@ const ProjectCard = ({ project }: Props) => {
     flex-direction: column;
   `;
   const icon = css`
-    font-size: ${theme.fontSizes.normal}rem;
+    font-size: ${theme.fontSizes.large}rem;
     transition: color 0.4s ease-in-out;
     &:hover {
       color: ${theme.colors.primary};
@@ -27,12 +27,14 @@ const ProjectCard = ({ project }: Props) => {
   const iconContainer = css`
     margin-top: 2rem;
     display: flex;
-    gap: 1rem;
+    gap: 2rem;
     align-items: center;
     color: ${theme.colors.light};
   `;
   const stackContainer = css`
-    color: ${theme.colors.neutral};
+    color: ${theme.colors.primaryLight};
+    font-weight: ${theme.fontWeights.bold};
+    font-size: 1.25rem;
     display: flex;
     flex-wrap: wrap;
   `;
