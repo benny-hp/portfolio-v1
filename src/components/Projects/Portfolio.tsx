@@ -19,8 +19,8 @@ const projects: Project[] = [
       "Nest.js",
       "PostgreSQL",
     ],
-    github: "https://github.com/Nomad-Freedom/popcorn-tracker-server",
-    link: "",
+    github: "https://github.com/Nomad-Freedom/-popcorn-tracker-web",
+    link: "https://popcorn-tracker-web.vercel.app",
   },
   {
     title: "Sticky Notes",
