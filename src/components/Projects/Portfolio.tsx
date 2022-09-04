@@ -6,6 +6,23 @@ import ProjectsList from "./ProjectsList";
 
 const projects: Project[] = [
   {
+    title: "CoinFolio",
+    description:
+      "CoinFolio is a full-stack cryptocurrency web application design to help users track their favorite coins and get a 7 days snapshot of the price. The app was build with next-auth, prisma, google provider for authentication, and trpc as a wrapper for serverless functions. The ui was build with tailwind for theming and dark and light mode.",
+    featured: true,
+    techStack: [
+      "React",
+      "Typescript",
+      "Next.js",
+      "Trpc",
+      "Node",
+      "Prisma",
+      "PostgreSQL",
+    ],
+    github: "https://github.com/Nomad-Freedom/coinfolio",
+    link: "https://coinfolio-plum.vercel.app/",
+  },
+  {
     title: "Popcorn Tracker",
     description:
       "Popcorn tracker is a full-stack movie tracking application that allows users to search movies and save them as watched or want to watch. The front-end was built using Typescript, React, Material UI. The back-end was built using Node, Nest.js, Typescript, and Postgres.",
