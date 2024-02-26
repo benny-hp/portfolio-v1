@@ -17,7 +17,9 @@ const Contact = () => {
       id="contact"
     >
       <Intro mb={1}>What&apos;s Next?</Intro>
-      <Heading mb={2}>Get In Touch</Heading>
+      <Heading mb={2} color="light">
+        Get In Touch
+      </Heading>
       <Text
         mb={0}
         styles={css`
@@ -25,6 +27,7 @@ const Contact = () => {
           margin: auto;
           margin-bottom: ${theme.space[4]}rem;
         `}
+        color="neutral"
       >
         Currently looking for any new opportunities. Whether you have a question
         or just want to say hi, I&apos;ll try my best to get back to you!

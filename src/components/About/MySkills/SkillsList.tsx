@@ -19,7 +19,12 @@ const SkillsList = ({ data }: Props) => {
       `}
     >
       {data.map(({ name }, index) => (
-        <li key={index}>
+        <li
+          key={index}
+          css={css`
+            color: ${theme.colors.neutral};
+          `}
+        >
           <BiRightArrow
             css={css`
               font-size: ${theme.fontSizes.medium}rem;

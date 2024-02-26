@@ -76,7 +76,9 @@ const MySkills = () => {
         }
       `}
     >
-      <Heading mb={4}>My Skills</Heading>
+      <Heading mb={4} color="light">
+        My Skills
+      </Heading>
       <div
         css={css`
           ${theme.mq()[1]} {
@@ -87,15 +89,23 @@ const MySkills = () => {
         `}
       >
         <div>
-          <SubHeading mb={2}>Programming Languages</SubHeading>
+          <SubHeading mb={2} color="light">
+            Programming Languages
+          </SubHeading>
           <SkillsList data={languages} />
-          <SubHeading mb={2}>Libraries & Frameworks</SubHeading>
+          <SubHeading mb={2} color="light">
+            Libraries & Frameworks
+          </SubHeading>
           <SkillsList data={libraries} />
         </div>
         <div>
-          <SubHeading mb={2}>Tools & Platforms</SubHeading>
+          <SubHeading mb={2} color="light">
+            Tools & Platforms
+          </SubHeading>
           <SkillsList data={tools} />
-          <SubHeading mb={2}>Design</SubHeading>
+          <SubHeading mb={2} color="light">
+            Design
+          </SubHeading>
           <SkillsList data={design} />
         </div>
       </div>

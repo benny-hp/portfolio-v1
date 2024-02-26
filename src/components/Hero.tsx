@@ -6,7 +6,11 @@ const Hero = () => {
   const theme = useTheme();
   return (
     <Container>
-      <div>
+      <div
+        css={css`
+          z-index: 230;
+        `}
+      >
         <Intro
           mb={1}
           styles={css`

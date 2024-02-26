@@ -71,14 +71,20 @@ const ContactForm = () => {
   // css styles
   const theme = useTheme();
   const inputStyles = css`
-    border: solid ${theme.colors.neutral} 2px;
+    border: solid ${theme.colors.primaryDark} 2px;
+    background-color: ${theme.colors.dark};
     border-radius: 0.4rem;
     padding: ${theme.space[1]}rem;
     font-size: ${theme.fontSizes.normal}rem;
+    color: ${theme.colors.neutral};
+    &::placeholder {
+      color: ${theme.colors.neutral};
+    }
+
     &:focus {
-      outline-style: auto;
+      outline-style: solid;
       outline-color: ${theme.colors.primary};
-      outline-width: initial;
+      outline-width: 1px;
       outline-offset: 0px;
     }
   `;

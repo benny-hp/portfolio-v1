@@ -8,14 +8,16 @@ const Cto = () => {
     <section
       css={css`
         background-color: ${theme.colors.dark};
-        margin-left: -${theme.space[2]}rem;
-        margin-right: -${theme.space[2]}rem;
+        margin-left: -${theme.space[3]}rem;
+        margin-right: -${theme.space[3]}rem;
+        padding-left: ${theme.space[3]}rem;
+        padding-right: ${theme.space[3]}rem;
       `}
     >
       <div
         css={css`
           max-width: 1400px;
-          margin: 0 ${theme.space[1]}rem;
+          /* margin: 0 ${theme.space[1]}rem; */
           padding: ${theme.space[6]}rem 0;
           ${theme.mq()[2]} {
             display: flex;

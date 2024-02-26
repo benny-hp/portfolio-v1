@@ -19,7 +19,7 @@ const Layout = ({ children }: Props) => {
           height: 100vh;
           width: 100%;
           overflow: hidden;
-          z-index: -1;
+          z-index: 1;
           background-color: ${theme.colors.dark};
         `}
       >
@@ -44,8 +44,9 @@ const Layout = ({ children }: Props) => {
 };
 
 const Main = styled.main`
-  padding: 0 ${({ theme }) => theme.space[2]}rem;
+  padding: 0 ${({ theme }) => theme.space[3]}rem;
   margin: auto;
+  background-color: #28282f;
 `;
 
 export default Layout;

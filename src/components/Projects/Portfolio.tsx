@@ -96,8 +96,10 @@ const Portfolio = () => {
       `}
       id="projects"
     >
-      <Heading mb={4}>Projects</Heading>
-      <Text mb={3}>
+      <Heading mb={4} color="light">
+        Projects
+      </Heading>
+      <Text mb={3} color="neutral">
         Showcasing complete functional projects that demonstrates what I can
         bring to your project. I built these projects from the ground up to
         demonstrate skills in font-end, back-end, security and database

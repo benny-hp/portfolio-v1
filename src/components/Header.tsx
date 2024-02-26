@@ -12,6 +12,8 @@ const Header = () => {
         padding: 32px 16px;
         max-width: 1600px;
         margin: auto;
+        z-index: 2;
+        position: relative;
       `}
     >
       <Link href="/" passHref>

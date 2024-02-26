@@ -8,6 +8,7 @@ const AboutMe = () => {
     font-weight: ${theme.fontWeights.body};
     margin-left: ${theme.space[1]}rem;
     font-size: ${theme.fontSizes.normal}rem;
+    color: ${theme.colors.neutral};
   `;
   return (
     <article
@@ -19,12 +20,14 @@ const AboutMe = () => {
         }
       `}
     >
-      <Heading mb={4}>About Me</Heading>
+      <Heading mb={4} color="light">
+        About Me
+      </Heading>
       <Intro mb={1}>Who am i?</Intro>
-      <SubHeading mb={2}>
+      <SubHeading mb={2} color="light">
         I&apos;m Benny Hernandez, a FullStack Web Developer
       </SubHeading>
-      <Text mb={2}>
+      <Text mb={2} color="neutral">
         I am a software developer based in the United States with more than 5
         years of experience in the tech industry and 1 year of experience
         developing advanced websites and web applications. What makes me
@@ -41,7 +44,7 @@ const AboutMe = () => {
           padding-top: ${theme.space[3]}rem;
         `}
       >
-        <Text mb={2} weight="bold">
+        <Text mb={2} weight="bold" color="light">
           Name: <span css={spanBase}>Benny Hernandez</span>
         </Text>
         <div
@@ -49,7 +52,7 @@ const AboutMe = () => {
             justify-self: center;
           `}
         >
-          <Text mb={2} weight="bold">
+          <Text mb={2} weight="bold" color="light">
             From: <span css={spanBase}>Miami, Fl</span>
           </Text>
         </div>
@@ -58,7 +61,7 @@ const AboutMe = () => {
             grid-column: 1 / -1;
           `}
         >
-          <Text mb={2} weight="bold">
+          <Text mb={2} weight="bold" color="light">
             Email:{" "}
             <a
               href="mailto:inquiry@bennyhernandez.com"
