@@ -8,8 +8,8 @@ const Cto = () => {
     <section
       css={css`
         background-color: ${theme.colors.dark};
-        margin-left: -${theme.space[1]}rem;
-        margin-right: -${theme.space[1]}rem;
+        margin-left: -${theme.space[2]}rem;
+        margin-right: -${theme.space[2]}rem;
       `}
     >
       <div

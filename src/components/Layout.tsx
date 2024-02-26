@@ -44,7 +44,7 @@ const Layout = ({ children }: Props) => {
 };
 
 const Main = styled.main`
-  padding: 0 ${({ theme }) => theme.space[1]}rem;
+  padding: 0 ${({ theme }) => theme.space[2]}rem;
   margin: auto;
 `;
 

@@ -74,10 +74,29 @@ const AboutMe = () => {
         </div>
       </div>
       <div>
-        <Button href="/resume.pdf" target="_blank">
+        <Button
+          href="/resume.pdf"
+          target="_blank"
+          myCss={css`
+            padding: ${theme.space[1]}rem ${theme.space[2]}rem;
+            ${theme.mq()[0]} {
+              padding: ${theme.space[1]}rem ${theme.space[4]}rem;
+            }
+          `}
+        >
           Download Resume
         </Button>
-        <Button variant="outline" href="/#projects" ml={2}>
+        <Button
+          variant="outline"
+          href="/#projects"
+          ml={2}
+          myCss={css`
+            padding: ${theme.space[1]}rem ${theme.space[2]}rem;
+            ${theme.mq()[0]} {
+              padding: ${theme.space[1]}rem ${theme.space[4]}rem;
+            }
+          `}
+        >
           My Work
         </Button>
       </div>

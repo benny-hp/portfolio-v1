@@ -1,5 +1,5 @@
 import React from "react";
-import { css, ThemeContext, useTheme } from "@emotion/react";
+import { css, SerializedStyles, ThemeContext, useTheme } from "@emotion/react";
 import Link from "next/link";
 
 interface Props {
@@ -11,6 +11,7 @@ interface Props {
   cta?: boolean;
   type?: "submit";
   target?: "_blank";
+  myCss?: SerializedStyles;
 }
 const Button = ({
   children,
@@ -21,6 +22,7 @@ const Button = ({
   cta,
   type,
   target,
+  myCss,
 }: Props) => {
   const theme = useTheme();
   const linkButtonStyles = css`
@@ -62,7 +64,13 @@ const Button = ({
 
   return (
     <Link href={href as string} passHref>
-      <a css={linkButtonStyles} target={target ?? "_self"}>
+      <a
+        css={css`
+          ${linkButtonStyles}
+          ${myCss}
+        `}
+        target={target ?? "_self"}
+      >
         {children}
       </a>
     </Link>
