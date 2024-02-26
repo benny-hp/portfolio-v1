@@ -60,8 +60,10 @@ const HeroHeading = styled.h2`
     span {
       font-size: 7.5rem;
     }
+  }
+
   ${({ theme }) => theme.mq()[4]} {
-    display:block;
+    display: block;
     font-size: 10rem;
     span {
       font-size: 10rem;
