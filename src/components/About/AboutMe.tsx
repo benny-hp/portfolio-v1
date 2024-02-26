@@ -74,7 +74,9 @@ const AboutMe = () => {
         </div>
       </div>
       <div>
-        <Button href="/resume.pdf">Download Resume</Button>
+        <Button href="/resume.pdf" target="_blank">
+          Download Resume
+        </Button>
         <Button variant="outline" href="/#projects" ml={2}>
           My Work
         </Button>

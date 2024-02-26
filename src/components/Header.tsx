@@ -8,6 +8,7 @@ const Header = () => {
       css={css`
         display: flex;
         align-items: center;
+        justify-content: space-between;
         padding: 32px 16px;
         max-width: 1600px;
         margin: auto;
@@ -45,7 +46,6 @@ const Header = () => {
 };
 
 const Logo = styled.a`
-  flex-grow: 1;
   text-transform: uppercase;
   color: ${({ theme }) => theme.colors.light};
   font-size: ${({ theme }) => theme.fontSizes.heading}rem;

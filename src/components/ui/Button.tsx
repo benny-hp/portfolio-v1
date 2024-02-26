@@ -10,6 +10,7 @@ interface Props {
   ml?: 0 | 1 | 2 | 3 | 4 | 5;
   cta?: boolean;
   type?: "submit";
+  target?: "_blank";
 }
 const Button = ({
   children,
@@ -19,6 +20,7 @@ const Button = ({
   ml = 0,
   cta,
   type,
+  target,
 }: Props) => {
   const theme = useTheme();
   const linkButtonStyles = css`
@@ -60,7 +62,9 @@ const Button = ({
 
   return (
     <Link href={href as string} passHref>
-      <a css={linkButtonStyles}>{children}</a>
+      <a css={linkButtonStyles} target={target ?? "_self"}>
+        {children}
+      </a>
     </Link>
   );
 };

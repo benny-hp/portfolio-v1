@@ -60,6 +60,12 @@ const HeroHeading = styled.h2`
     span {
       font-size: 7.5rem;
     }
+  ${({ theme }) => theme.mq()[4]} {
+    display:block;
+    font-size: 10rem;
+    span {
+      font-size: 10rem;
+    }
   }
 `;
 const HeroSubHeading = styled.h1`
@@ -73,6 +79,7 @@ const HeroSubHeading = styled.h1`
 const Container = styled.section`
   display: flex;
   align-items: center;
+  justify-content: center;
   max-width: 1400px;
   margin: auto;
   min-height: calc(100vh - 98.5px);
@@ -81,5 +88,5 @@ const Container = styled.section`
 const Text = styled.p`
   font-size: ${({ theme }) => theme.fontSizes.large}rem;
   color: ${({ theme }) => theme.colors.light};
-  max-width: 40ch;
+  // max-width: 40ch;
 `;
