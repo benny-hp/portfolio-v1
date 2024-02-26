@@ -36,6 +36,9 @@ const Button = ({
     color: ${theme.colors.light};
     color: ${variant === "outline" ? theme.colors.primary : theme.colors.light};
     transition: background-color 0.3s ease-out, color 0.3s ease-out;
+    font-weight: ${theme.fontWeights.bold};
+    letter-spacing: 0.75px;
+    cursor: pointer;
 
     &:hover {
       background-color: ${variant === "outline"

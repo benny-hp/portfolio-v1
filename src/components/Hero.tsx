@@ -33,7 +33,7 @@ const Hero = () => {
           applications) .
         </Text>
 
-        <Button href="/#about">learn more</Button>
+        <Button href="/#about">Learn More</Button>
       </div>
     </Container>
   );

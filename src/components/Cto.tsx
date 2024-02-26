@@ -46,7 +46,7 @@ const Cto = () => {
           </Text>
         </div>
         <Button href="#contact" mt={0} cta>
-          Hire me
+          Hire Me
         </Button>
       </div>
     </section>

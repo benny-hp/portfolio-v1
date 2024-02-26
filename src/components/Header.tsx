@@ -50,12 +50,20 @@ const Logo = styled.a`
   color: ${({ theme }) => theme.colors.light};
   font-size: ${({ theme }) => theme.fontSizes.heading}rem;
   font-weight: ${({ theme }) => theme.fontWeights.bolder};
+  transition: color 0.2s ease-in-out;
+  &:hover {
+    color: ${({ theme }) => theme.colors.primaryLight};
+  }
 `;
 
 const NavLink = styled.a`
   font-size: ${({ theme }) => theme.fontSizes.normal}rem;
   font-weight: ${({ theme }) => theme.fontWeights.bold};
   color: ${({ theme }) => theme.colors.light};
+  transition: color 0.2s ease-in-out;
+  &:hover {
+    color: ${({ theme }) => theme.colors.primaryLight};
+  }
 `;
 
 export default Header;

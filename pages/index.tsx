@@ -61,7 +61,7 @@ const Home: NextPage = () => {
       <About />
       <Cto />
       <Portfolio />
-      <ClientPortfolio />
+      {/* <ClientPortfolio /> */}
       <Contact />
     </>
   );
