@@ -63,16 +63,15 @@ const Button = ({
   }
 
   return (
-    <Link href={href as string} passHref>
-      <a
-        css={css`
-          ${linkButtonStyles}
-          ${myCss}
-        `}
-        target={target ?? "_self"}
-      >
-        {children}
-      </a>
+    <Link
+      href={href as string}
+      css={css`
+        ${linkButtonStyles}
+        ${myCss}
+      `}
+      target={target ?? "_self"}
+    >
+      {children}
     </Link>
   );
 };
