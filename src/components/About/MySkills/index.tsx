@@ -2,6 +2,7 @@ import { css, useTheme } from "@emotion/react";
 import React from "react";
 import { Heading, SubHeading } from "../../ui";
 import SkillsList from "./SkillsList";
+import { fadeRight } from "../../../lib/animation";
 const languages = [
   {
     name: "JavaScript (ES6)",
@@ -76,7 +77,7 @@ const MySkills = () => {
         }
       `}
     >
-      <Heading mb={4} color="light">
+      <Heading mb={4} color="light" variant={fadeRight({ delay: 0.1 })}>
         My Skills
       </Heading>
       <div
@@ -89,21 +90,21 @@ const MySkills = () => {
         `}
       >
         <div>
-          <SubHeading mb={2} color="light">
+          <SubHeading mb={2} color="light" variant={fadeRight({ delay: 0.2 })}>
             Programming Languages
           </SubHeading>
           <SkillsList data={languages} />
-          <SubHeading mb={2} color="light">
+          <SubHeading mb={2} color="light" variant={fadeRight({ delay: 0.2 })}>
             Libraries & Frameworks
           </SubHeading>
           <SkillsList data={libraries} />
         </div>
         <div>
-          <SubHeading mb={2} color="light">
+          <SubHeading mb={2} color="light" variant={fadeRight({ delay: 0.2 })}>
             Tools & Platforms
           </SubHeading>
           <SkillsList data={tools} />
-          <SubHeading mb={2} color="light">
+          <SubHeading mb={2} color="light" variant={fadeRight({ delay: 0.2 })}>
             Design
           </SubHeading>
           <SkillsList data={design} />

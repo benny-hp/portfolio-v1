@@ -47,6 +47,7 @@ const Main = styled.main`
   padding: 0 ${({ theme }) => theme.space[3]}rem;
   margin: auto;
   background-color: #28282f;
+  overflow-x: hidden;
 `;
 
 export default Layout;
