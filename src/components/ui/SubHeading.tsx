@@ -1,5 +1,6 @@
 import React from "react";
 import { css, useTheme } from "@emotion/react";
+import { Variants, motion } from "framer-motion";
 
 interface Props {
   children: React.ReactNode;
@@ -13,12 +14,19 @@ interface Props {
     | "light"
     | "dark"
     | "neutral";
+  variant?: Variants;
 }
-const SubHeading = ({ children, mb, weight = "bolder", color }: Props) => {
+const SubHeading = ({
+  children,
+  mb,
+  weight = "bolder",
+  color,
+  variant,
+}: Props) => {
   const theme = useTheme();
 
   return (
-    <h3
+    <motion.h3
       css={css`
         margin-bottom: ${theme.space[mb]}rem;
         font-size: ${theme.fontSizes.large}rem;
@@ -27,9 +35,12 @@ const SubHeading = ({ children, mb, weight = "bolder", color }: Props) => {
         ${color && `color: ${theme.colors[color]}`};
         line-height: 1.3;
       `}
+      variants={variant}
+      initial={"hidden"}
+      whileInView={"visible"}
     >
       {children}
-    </h3>
+    </motion.h3>
   );
 };
 

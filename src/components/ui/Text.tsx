@@ -1,5 +1,6 @@
 import React from "react";
 import { css, SerializedStyles, useTheme } from "@emotion/react";
+import { Variants, motion } from "framer-motion";
 
 interface Props {
   children: React.ReactNode;
@@ -15,6 +16,7 @@ interface Props {
     | "dark"
     | "neutral";
   styles?: SerializedStyles;
+  variant?: Variants;
 }
 const Text = ({
   children,
@@ -23,10 +25,11 @@ const Text = ({
   ml = 0,
   color,
   styles,
+  variant,
 }: Props) => {
   const theme = useTheme();
   return (
-    <p
+    <motion.p
       css={css`
         margin-bottom: ${theme.space[mb]}rem;
         font-size: ${theme.fontSizes.normal}rem;
@@ -35,9 +38,12 @@ const Text = ({
         ${color && `color: ${theme.colors[color]}`};
         ${styles}
       `}
+      variants={variant}
+      initial={"hidden"}
+      whileInView={"visible"}
     >
       {children}
-    </p>
+    </motion.p>
   );
 };
 
