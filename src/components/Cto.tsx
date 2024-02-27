@@ -50,7 +50,7 @@ const Cto = () => {
           </Text>
         </div>
         <Button href="#contact" mt={0} cta mVariant={fadeRight({ delay: 0.3 })}>
-          Hire Me
+          Contact Me
         </Button>
       </div>
     </section>

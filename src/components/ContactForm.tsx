@@ -1,12 +1,14 @@
 import { css, useTheme } from "@emotion/react";
 
 import { useForm } from "react-hook-form";
+import { motion } from "framer-motion";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 
 import { Button } from "./ui";
 import Snackbar from "./ui/Snackbar";
 import { useState } from "react";
+import { fadeLeft, fadeLeftStagger, item } from "../lib/animation";
 
 export interface FormInputs {
   name: string;
@@ -98,7 +100,7 @@ const ContactForm = () => {
   return (
     <>
       <form onSubmit={handleSubmit(onSubmit)}>
-        <div
+        <motion.div
           css={css`
             display: grid;
             grid-gap: ${theme.space[2]}rem;
@@ -106,8 +108,14 @@ const ContactForm = () => {
               grid-template-columns: repeat(2, 1fr);
             }
           `}
+          variants={fadeLeftStagger({
+            delayChildren: 0.3,
+            staggerChildren: 0.2,
+          })}
+          initial={"hidden"}
+          whileInView={"visible"}
         >
-          <input
+          <motion.input
             css={css`
               ${inputStyles}
               &:focus {
@@ -117,8 +125,9 @@ const ContactForm = () => {
             type="text"
             {...register("name")}
             placeholder="Name *"
+            variants={item()}
           />
-          <input
+          <motion.input
             css={css`
               ${inputStyles}
               &:focus {
@@ -128,8 +137,9 @@ const ContactForm = () => {
             type="text"
             {...register("company")}
             placeholder="Company *"
+            variants={item()}
           />
-          <input
+          <motion.input
             css={css`
               ${inputStyles}
               &:focus {
@@ -139,8 +149,9 @@ const ContactForm = () => {
             type="email"
             {...register("email")}
             placeholder="Email *"
+            variants={item()}
           />
-          <input
+          <motion.input
             css={css`
               ${inputStyles}
               &:focus {
@@ -150,8 +161,9 @@ const ContactForm = () => {
             type="tel"
             {...register("phone")}
             placeholder="Phone (optional)"
+            variants={item()}
           />
-          <textarea
+          <motion.textarea
             css={css`
               ${textareaStyles}
               &:focus {
@@ -160,9 +172,12 @@ const ContactForm = () => {
             `}
             {...register("message")}
             placeholder="Message *"
-          ></textarea>
-        </div>
-        <Button type="submit">Say Hello</Button>
+            variants={item()}
+          ></motion.textarea>
+        </motion.div>
+        <Button type="submit" mVariant={fadeLeft({ delay: 0.4 })}>
+          Say Hello
+        </Button>
       </form>
       <Snackbar
         open={open}

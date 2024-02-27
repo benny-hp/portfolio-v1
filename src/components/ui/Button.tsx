@@ -59,9 +59,15 @@ const Button = ({
   `;
   if (type === "submit") {
     return (
-      <button css={linkButtonStyles} type="submit">
+      <motion.button
+        css={linkButtonStyles}
+        type="submit"
+        variants={mVariant}
+        initial={"hidden"}
+        whileInView={"visible"}
+      >
         {children}
-      </button>
+      </motion.button>
     );
   }
 
