@@ -66,12 +66,26 @@ export const fadeRightStagger = (obj?: DelayStagger): Variants => {
   };
 };
 
-export function item() {
+export function item(): Variants {
   return {
     hidden: { y: 20, opacity: 0 },
     visible: {
       y: 0,
       opacity: 1,
+    },
+  };
+}
+
+export function cardItem(obj: Delay): Variants {
+  return {
+    hidden: { y: 20, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        duration: 0.5,
+        ...obj,
+      },
     },
   };
 }

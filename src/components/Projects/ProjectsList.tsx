@@ -1,7 +1,9 @@
 import { css, useTheme } from "@emotion/react";
 import React from "react";
+import { motion } from "framer-motion";
 import { Project } from "../../interfaces/Project";
 import ProjectCard from "./ProjectCard";
+import { fadeLeftStagger, fadeRightStagger } from "../../lib/animation";
 interface Props {
   projects: Project[];
 }
@@ -18,11 +20,16 @@ const ProjectsList = ({ projects = [] }: Props) => {
     }
   `;
   return (
-    <div css={gridContainer}>
+    <motion.div
+      css={gridContainer}
+      // variants={fadeLeftStagger({ delayChildren: 0.3, staggerChildren: 0.2 })}
+      // initial={"hidden"}
+      // whileInView={"visible"}
+    >
       {projects.map((project, index) => (
-        <ProjectCard key={index} project={project} />
+        <ProjectCard key={index} project={project} index={index} />
       ))}
-    </div>
+    </motion.div>
   );
 };
 

@@ -3,10 +3,13 @@ import { Project } from "../../interfaces/Project";
 import { Intro, SubHeading, Text } from "../ui";
 import { FiExternalLink, FiGithub } from "react-icons/fi";
 import { css, useTheme } from "@emotion/react";
+import { motion } from "framer-motion";
+import { cardItem, item } from "../../lib/animation";
 interface Props {
   project: Project;
+  index: number;
 }
-const ProjectCard = ({ project }: Props) => {
+const ProjectCard = ({ project, index }: Props) => {
   const theme = useTheme();
   const { title, description, featured, github, link, techStack } = project;
   // styles
@@ -39,7 +42,12 @@ const ProjectCard = ({ project }: Props) => {
     flex-wrap: wrap;
   `;
   return (
-    <div css={container}>
+    <motion.div
+      css={container}
+      variants={cardItem({ delay: Number(`0.${index}`) + 0.2 })}
+      initial={"hidden"}
+      whileInView={"visible"}
+    >
       {featured && <Intro mb={1}>Featured Project</Intro>}
       <SubHeading mb={3} color={"light"}>
         {title}
@@ -70,7 +78,7 @@ const ProjectCard = ({ project }: Props) => {
           </a>
         )}
       </div>
-    </div>
+    </motion.div>
   );
 };
 

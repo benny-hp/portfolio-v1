@@ -3,6 +3,7 @@ import React from "react";
 import { Project } from "../../interfaces/Project";
 import { Heading, Text } from "../ui";
 import ProjectsList from "./ProjectsList";
+import { fadeLeft } from "../../lib/animation";
 
 const projects: Project[] = [
   {
@@ -96,10 +97,10 @@ const Portfolio = () => {
       `}
       id="projects"
     >
-      <Heading mb={4} color="light">
+      <Heading mb={4} color="light" variant={fadeLeft({ delay: 0.1 })}>
         Projects
       </Heading>
-      <Text mb={3} color="neutral">
+      <Text mb={3} color="neutral" variant={fadeLeft({ delay: 0.2 })}>
         Showcasing complete functional projects that demonstrates what I can
         bring to your project. I built these projects from the ground up to
         demonstrate skills in font-end, back-end, security and database
