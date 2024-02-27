@@ -1,6 +1,7 @@
 import React from "react";
 import { Button, Heading, Intro, SubHeading, Text } from "../ui";
 import { css, useTheme } from "@emotion/react";
+import { fadeLeft } from "../../lib/animation";
 
 const AboutMe = () => {
   const theme = useTheme();
@@ -20,10 +21,12 @@ const AboutMe = () => {
         }
       `}
     >
-      <Heading mb={4} color="light">
+      <Heading mb={4} color="light" variant={fadeLeft({ delay: 0.1 })}>
         About Me
       </Heading>
-      <Intro mb={1}>Who am i?</Intro>
+      <Intro mb={1} variant={fadeLeft({ delay: 0.2 })}>
+        Who am i?
+      </Intro>
       <SubHeading mb={2} color="light">
         I&apos;m Benny Hernandez, a FullStack Web Developer
       </SubHeading>

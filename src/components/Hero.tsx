@@ -1,9 +1,12 @@
 import { css, useTheme } from "@emotion/react";
 import styled from "@emotion/styled";
 import { Intro, Button } from "../components/ui";
+import { fadeLeft } from "../lib/animation";
+import { motion } from "framer-motion";
 
 const Hero = () => {
   const theme = useTheme();
+
   return (
     <Container>
       <div
@@ -18,10 +21,15 @@ const Hero = () => {
               font-size: 2.4rem;
             }
           `}
+          variant={fadeLeft({ delay: 0.1 })}
         >
           Hi, my name is
         </Intro>
-        <HeroHeading>
+        <HeroHeading
+          variants={fadeLeft({ delay: 0.2 })}
+          initial={"hidden"}
+          whileInView={"visible"}
+        >
           Benny{" "}
           <span
             css={css`
@@ -31,13 +39,25 @@ const Hero = () => {
             Hernandez
           </span>
         </HeroHeading>
-        <HeroSubHeading>Full Stack Developer</HeroSubHeading>
-        <Text>
+        <HeroSubHeading
+          variants={fadeLeft({ delay: 0.3 })}
+          initial={"hidden"}
+          whileInView={"visible"}
+        >
+          Full Stack Developer
+        </HeroSubHeading>
+        <Text
+          variants={fadeLeft({ delay: 0.4 })}
+          initial={"hidden"}
+          whileInView={"visible"}
+        >
           I’m a software engineer specializing in building (full stack web
           applications) .
         </Text>
 
-        <Button href="/#about">Learn More</Button>
+        <Button href="/#about" mVariant={fadeLeft({ delay: 0.5 })}>
+          Learn More
+        </Button>
       </div>
     </Container>
   );
@@ -45,7 +65,7 @@ const Hero = () => {
 
 export default Hero;
 
-const HeroHeading = styled.h2`
+const HeroHeading = styled(motion.h2)`
   font-size: 8rem;
   font-weight: 900;
   display: inline-flex;
@@ -74,7 +94,7 @@ const HeroHeading = styled.h2`
     }
   }
 `;
-const HeroSubHeading = styled.h1`
+const HeroSubHeading = styled(motion.h1)`
   color: ${({ theme }) => theme.colors.light};
   font-weight: ${({ theme }) => theme.fontWeights.bolder};
   margin-bottom: ${({ theme }) => theme.space[2]}rem;
@@ -91,7 +111,7 @@ const Container = styled.section`
   min-height: calc(100vh - 98.5px);
 `;
 
-const Text = styled.p`
+const Text = styled(motion.p)`
   font-size: ${({ theme }) => theme.fontSizes.large}rem;
   color: ${({ theme }) => theme.colors.light};
   // max-width: 40ch;

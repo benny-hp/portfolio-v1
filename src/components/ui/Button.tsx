@@ -1,6 +1,7 @@
 import React from "react";
 import { css, SerializedStyles, ThemeContext, useTheme } from "@emotion/react";
 import Link from "next/link";
+import { Variants, motion } from "framer-motion";
 
 interface Props {
   children: React.ReactNode;
@@ -12,6 +13,7 @@ interface Props {
   type?: "submit";
   target?: "_blank";
   myCss?: SerializedStyles;
+  mVariant?: Variants;
 }
 const Button = ({
   children,
@@ -23,6 +25,7 @@ const Button = ({
   type,
   target,
   myCss,
+  mVariant,
 }: Props) => {
   const theme = useTheme();
   const linkButtonStyles = css`
@@ -63,16 +66,18 @@ const Button = ({
   }
 
   return (
-    <Link
-      href={href as string}
-      css={css`
-        ${linkButtonStyles}
-        ${myCss}
-      `}
-      target={target ?? "_self"}
-    >
-      {children}
-    </Link>
+    <motion.div variants={mVariant} initial={"hidden"} whileInView={"visible"}>
+      <Link
+        href={href as string}
+        css={css`
+          ${linkButtonStyles}
+          ${myCss}
+        `}
+        target={target ?? "_self"}
+      >
+        {children}
+      </Link>
+    </motion.div>
   );
 };
 
