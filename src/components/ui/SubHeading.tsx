@@ -25,6 +25,7 @@ const SubHeading = ({ children, mb, weight = "bolder", color }: Props) => {
         color: ${theme.colors.dark};
         font-weight: ${theme.fontWeights[weight]};
         ${color && `color: ${theme.colors[color]}`};
+        line-height: 1.3;
       `}
     >
       {children}

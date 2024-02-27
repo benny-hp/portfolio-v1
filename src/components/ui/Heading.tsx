@@ -21,7 +21,8 @@ const Heading = ({ children, mb, weight = "boldest", color }: Props) => {
         margin-bottom: ${theme.space[mb]}rem;
         font-size: ${theme.fontSizes.heading}rem;
         font-weight: ${theme.fontWeights[weight]};
-        ${color && `color: ${theme.colors[color]}`}
+        ${color && `color: ${theme.colors[color]}`};
+        line-height: 1.15;
       `}
     >
       {children}

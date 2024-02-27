@@ -76,7 +76,14 @@ const AboutMe = () => {
           </Text>
         </div>
       </div>
-      <div>
+      <div
+        css={css`
+          display: flex;
+          align-items: flex-end;
+          flex-wrap: wrap;
+          gap: 2rem;
+        `}
+      >
         <Button
           href="/resume.pdf"
           target="_blank"
@@ -95,6 +102,7 @@ const AboutMe = () => {
           ml={2}
           myCss={css`
             padding: ${theme.space[1]}rem ${theme.space[2]}rem;
+            margin: 0;
             ${theme.mq()[0]} {
               padding: ${theme.space[1]}rem ${theme.space[4]}rem;
             }
