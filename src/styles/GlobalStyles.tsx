@@ -11,6 +11,9 @@ const GlobalStyles = () => {
           margin: 0;
           font-family: ${theme.fonts.body};
         }
+        body {
+          overflow-x: hidden;
+        }
         html {
           font-size: 62.5%;
           scroll-behavior: smooth;
